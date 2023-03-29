@@ -13,6 +13,6 @@ function isiTablePresensi(results) {
 }
 
 function isiRow(value) {
-    let content = isiTabel.replace("#NAMA#", value.Biodata.Nama).replace("#NOHP#", value.Phone_number).replace("#JABATAN#", value.Datetime).replace("#LOKASI#", value.Location).replace("#STATUS#", value.Checkin).replace("#HARIKERJA#", value.Datetime).replace("#JAMKERJA#", value.Datetime).replace("#WARNA#", getRandomColor()).replace(/#WARNALOGO#/g, getRandomColorName());
+    let content = isiTabel.replace("#NAMA#", value.biodata.nama).replace("#NOHP#", value.biodata.phone_number).replace("#JABATAN#", value.datetime).replace("#LOKASI#", value.location).replace("#STATUS#", value.checkin).replace("#HARIKERJA#", value.biodata.hari_kerja).replace("#JAMKERJA#", value.durasi).replace("#WARNA#", getRandomColor()).replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("presensi", content);
 }
