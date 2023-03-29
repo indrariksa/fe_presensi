@@ -6,4 +6,9 @@ get(URLPresensi, isiTablePresensi);
 
 function isiTablePresensi(results) {
     console.log(results);
+    results.forEach(isiRow);
+}
+
+function isiRow(value) {
+    console.log(value)
 }
