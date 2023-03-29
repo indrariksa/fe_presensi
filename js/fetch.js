@@ -1,6 +1,6 @@
 import { get } from "https://bukulapak.github.io/api/process.js";
 
-let URLPresensi = "http://ws-ulbi.herokuapp.com/presensi";
+let URLPresensi = "https://ws-ulbi.herokuapp.com/presensi";
 
 get(URLPresensi, isiTablePresensi);
 
