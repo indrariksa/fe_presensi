@@ -18,9 +18,9 @@ function isiRow(value) {
         var jamKeluar = value.biodata.jam_kerja[0].jam_keluar;
     }
     else {
-        Durasi = ["Error"];
-        jamMasuk = ["Error"];
-        jamKeluar = ["Error"];
+        Durasi = ["undefined"];
+        jamMasuk = ["undefined"];
+        jamKeluar = ["undefined"];
     }
 
     document.getElementById("jml").textContent = MyVar.length + " Data";
