@@ -6,7 +6,9 @@ var MyVar = {};
 
 export function isiTablePresensi(results) {
     MyVar.length = results.length;
+    results.sort((a, b) => new Date(b.datetime) - new Date(a.datetime)); //sort by datetime in descending order (OPTIONAL)
     results.forEach(isiRow);
+    console.log(results);
 }
 
 function isiRow(value) {
