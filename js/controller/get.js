@@ -12,17 +12,6 @@ export function isiTablePresensi(results) {
 }
 
 function isiRow(value) {
-    if (value.biodata.jam_kerja) {
-        var Durasi = value.biodata.jam_kerja[0].durasi;
-        var jamMasuk = value.biodata.jam_kerja[0].jam_masuk;
-        var jamKeluar = value.biodata.jam_kerja[0].jam_keluar;
-    }
-    else {
-        Durasi = ["undefined"];
-        jamMasuk = ["undefined"];
-        jamKeluar = ["undefined"];
-    }
-
     document.getElementById("jml").textContent = MyVar.length + " Data";
 
     let content =
@@ -32,9 +21,9 @@ function isiRow(value) {
             .replace("#LOKASI#", value.location)
             .replace("#STATUS#", value.checkin)
             .replace("#HARIKERJA#", value.biodata.hari_kerja)
-            .replace("#JAMKERJA#", Durasi)
-            .replace("#JAMMASUK#", jamMasuk)
-            .replace("#JAMKELUAR#", jamKeluar)
+            .replace("#JAMKERJA#", value.biodata.jam_kerja ? value.biodata.jam_kerja[0].durasi : ["undefined"])
+            .replace("#JAMMASUK#", value.biodata.jam_kerja ? value.biodata.jam_kerja[0].jam_masuk : ["undefined"])
+            .replace("#JAMKELUAR#", value.biodata.jam_kerja ? value.biodata.jam_kerja[0].jam_keluar : ["undefined"])
             .replace("#WARNA#", getRandomColor())
             .replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("iniTabel", content);
