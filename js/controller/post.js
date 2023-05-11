@@ -23,7 +23,12 @@ function pushData(){
             hari_kerja : hari_kerja.split(",")
         }
     }
-    postData(urlPOST, data, AmbilResponse);
+    
+    if (data.biodata.nama == "" || data.biodata.jabatan == "") {
+        alert("Nama dan Jabatan wajib diisi!!");
+    } else {
+        postData(urlPOST, data, AmbilResponse);
+    }
 
 }
 
