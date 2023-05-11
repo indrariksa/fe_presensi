@@ -1,6 +1,6 @@
 import { postData } from "https://bukulapak.github.io/api/process.js";
 import { onClick, getValue } from "https://bukulapak.github.io/element/process.js";
-import { Urlpost, AmbilResponse} from "../config/url_post.js";
+import { urlPOST, AmbilResponse} from "../config/url_post.js";
 
 
 function pushData(){
@@ -23,7 +23,7 @@ function pushData(){
             hari_kerja : hari_kerja.split(",")
         }
     }
-    postData(Urlpost, data, AmbilResponse);
+    postData(urlPOST, data, AmbilResponse);
 
 }
 
