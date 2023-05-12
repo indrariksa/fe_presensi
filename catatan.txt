@@ -1,7 +1,4 @@
-import { postData } from "https://bukulapak.github.io/api/process.js";
-import { onClick, getValue } from "https://bukulapak.github.io/element/process.js";
-import { urlPOST, AmbilResponse} from "../config/url_post.js";
-
+post.js
 
 function pushData(){
     var hari_kerja = getValue("hari_kerja");
@@ -23,9 +20,11 @@ function pushData(){
             hari_kerja : hari_kerja.split(",")
         }
     }
-
-    postData(urlPOST, data, AmbilResponse);
+    
+    if (data.biodata.nama == "" || data.biodata.jabatan == "") {
+         alert("Nama dan Jabatan wajib diisi!!");
+    } else {
+        postData(urlPOST, data, AmbilResponse);
+    }
 
 }
-
-onClick("button", pushData);
