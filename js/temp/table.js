@@ -26,13 +26,13 @@ export let isiTabel =
         <p class="text-xs font-medium text-coolGray-500">#JAMKELUAR#</p>
         </div>
     </th>
-    
+
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
-    <a type="button" href="http://127.0.0.1:5500/template/edit.html?presensiId=#IDEDIT#"> Edit
+    <a type="button" href="edit.html?presensiId=#IDEDIT#" data-presensi-id="#IDHAPUS#"> Edit
     </a>
     |
-    <a type="button" href="http://127.0.0.1:5500/template/edit.html?presensiId=#IDHAPUS#"> Delete
-    </a>
+    <button type="button" id="del_button" onclick="deleteData()"> Delete
+    </button>
     </th>
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
         <svg class="ml-auto" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
