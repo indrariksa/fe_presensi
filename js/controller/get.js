@@ -24,6 +24,8 @@ function isiRow(value) {
             .replace("#JAMKERJA#", value.biodata.jam_kerja ? value.biodata.jam_kerja[0].durasi : ["undefined"])
             .replace("#JAMMASUK#", value.biodata.jam_kerja ? value.biodata.jam_kerja[0].jam_masuk : ["undefined"])
             .replace("#JAMKELUAR#", value.biodata.jam_kerja ? value.biodata.jam_kerja[0].jam_keluar : ["undefined"])
+            .replace("#IDEDIT#", value._id)
+            .replace("#IDHAPUS#", value._id)
             .replace("#WARNA#", getRandomColor())
             .replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("iniTabel", content);
