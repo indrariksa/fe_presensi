@@ -8,9 +8,10 @@
 // }
 
 // onClick("del_button", deleteDatax);
+// var presensiId = document.querySelector('a[data-presensi-id]').getAttribute('data-presensi-id');
 
-function deleteData() {
-    var presensiId = document.querySelector('a[data-presensi-id]').getAttribute('data-presensi-id');
+function deleteData(IDHAPUS) {
+    var presensiId = IDHAPUS;
     var target_url = "https://ws-ulbi.herokuapp.com/delete/" + presensiId;
 
     var requestOptions = {
