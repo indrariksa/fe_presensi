@@ -11,6 +11,7 @@
 // var presensiId = document.querySelector('a[data-presensi-id]').getAttribute('data-presensi-id');
 
 function deleteData(IDHAPUS) {
+    if (confirm("Apakah anda yakin ingin menghapus data ini?") == true) {
     var presensiId = IDHAPUS;
     var target_url = "https://ws-ulbi.herokuapp.com/delete/" + presensiId;
 
@@ -26,4 +27,7 @@ function deleteData(IDHAPUS) {
             location.reload();
         })
         .catch(error => console.log('Error:', error));
+    }else{
+        alert("Data tidak jadi dihapus");  
+    }
 }
